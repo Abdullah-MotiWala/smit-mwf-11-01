@@ -335,7 +335,7 @@ console.log(names.length);
 // console.log(a)
 
 // const a2 = 1;
-// // a2 = "abc";
+// a2 = "abc";
 
 // let a1 = 1;
 // a1 = "abc";
@@ -345,15 +345,125 @@ console.log(names.length);
 // var b = 5;
 // b = 6;
 
-const email = "hassan@smit.com";
-const username = "ali";
+// const email = "hassan@smit.com";
+// const username = "ali";
 
-const userEmail = prompt("Enter your email");
-const userEmailInLowercase = userEmail.toLowerCase();
-const userEmailInUppercase = userEmail.toUpperCase();
-console.log(userEmail, userEmailInLowercase, userEmailInUppercase);
-if (email === userEmailInLowercase) {
-  alert("Your username is " + username);
-} else {
-  alert("Invalid credentials");
+// const userEmail = prompt("Enter your email");
+// const userEmailInLowercase = userEmail.toLowerCase();
+// const userEmailInUppercase = userEmail.toUpperCase();
+// console.log(userEmail, userEmailInLowercase, userEmailInUppercase);
+// if (email === userEmailInLowercase) {
+//   alert("Your username is " + username);
+// } else {
+//   alert("Invalid credentials");
+// }
+
+// const country = "Pakistan";
+// const shortForm = country.slice(0, 3);
+// console.log(country, country.length, country[1], shortForm);
+
+// const value = prompt("Enter your value");
+// const firstLetter = value[0];
+// const otherThanFirstLetter = value.slice(1);
+
+// const upperCaseLetter = firstLetter.toUpperCase();
+// const lowerCaseLetters = otherThanFirstLetter.toLowerCase();
+
+// const newValue = upperCaseLetter + lowerCaseLetters;
+// console.log(newValue);
+
+// let newValue = "";
+// for (let i = 0; i < value.length; i++) {
+//   const item = value[i];
+//   if (item === "a" || item === "A") {
+//     newValue = newValue + item.toUpperCase();
+//     continue;
+//   }
+//   newValue = newValue + item;
+// }
+
+// console.log(newValue);
+
+// const text =
+//   " the quick queen queue     brown fox jumps over a      courage cowardly dog over       ";
+
+// const word = "over";
+// let indexNumber = -1;
+
+// for (let i = 0; i < text.length; i++) {
+//   const currentWord = text.slice(i, i + word.length);
+//   if(currentWord === word){
+//     indexNumber = i
+//     break;
+//   }
+// }
+// console.log(indexNumber)
+
+// let totalWords = 0;
+
+// for (let i = 0; i < text.length; i++) {
+//   const letter = text[i];
+//   const nextLetter = text[i + 1];
+
+//   if (letter === " " && nextLetter !== " " && i > 0 && i < text.length - 1) totalWords++;
+// }
+
+// totalWords++;
+
+// console.log(totalWords);
+
+// const totalWordsArray = text.split(" ");
+// console.log(totalWordsArray)
+// let totalWords = 0;
+// for (let i = 0; i < totalWordsArray.length; i++) {
+//   if (totalWordsArray[i] !== "") totalWords++;
+// }
+// console.log(totalWords);
+
+// const text = "Huzaia is a good tiktoker";
+// const newHuzaifa = text.replace("tiktoker", "trans");
+
+// console.log(text,newHuzaifa)
+
+// const text = "Huzaifa is a good boy, and he deserves to be boy";
+// const newHuzaifa = text.replaceAll("boy", "trans");
+
+// console.log(newHuzaifa)
+
+// const biscuit = 50.5
+// const roundedValue = Math.round(biscuit)
+// console.log(biscuit,roundedValue)
+
+// const customerBill = 19.00000000001;
+// const newBill = Math.ceil(customerBill)
+// console.log(newBill)
+
+// const customerReturn = 19.5
+// const newReturn = Math.floor(customerReturn)
+// console.log(newReturn)
+
+// const randomNumber = Math.random();
+// console.log(randomNumber,"====randomNumber")
+
+const target = 45;
+let userScore = 0;
+
+while (userScore < target) {
+  const userOutput = +prompt("Enter your number");
+  userScore += userOutput;
+  const randomNumber = Math.random();
+  const computerOutput = Math.ceil(randomNumber * 6);
+
+  if (userScore >= target) {
+    alert("You won, but I'll comeback like Ra-One");
+    break;
+  }
+
+  if (computerOutput === userOutput) {
+    alert("Hahahaha! You've lost by dumb machine");
+    break;
+  }
+
+  alert("Your score is " + userScore);
+  alert("Computer throw the " + computerOutput);
 }
